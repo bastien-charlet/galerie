@@ -1,0 +1,113 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    /*max-width: 800px;*/
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Style pour le formulaire */
+form {
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style pour la liste des tâches */
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Créer 3 colonnes égales */
+    grid-gap: 20px; /* Espacement entre les éléments */
+}
+
+.galerie {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.galerie img {
+    max-width: 100%; /* Image s'ajuste à la largeur du conteneur */
+}
+
+.galerie.completed {
+    background-color: #45a049;
+}
+
+.galerie-actions {
+    margin-top: 5px;
+}
+
+.galerie-actions a {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.galerie-actions a.edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.galerie-actions a.edit:hover {
+    background-color: #ffbb33;
+}
+
+.galerie-actions a.delete {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.galerie-actions a.delete:hover {
+    background-color: #d32f2f;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .galerie-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .galerie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
